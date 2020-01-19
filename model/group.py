@@ -1,5 +1,6 @@
 __author__ = 'sinelnikova anastasia'
 
+
 class Group:
 
     def __init__(self, name, header, footer):

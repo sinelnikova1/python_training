@@ -1,5 +1,6 @@
 __author__ = 'sinelnikova anastasia'
 
+
 class Contacts:
 
     def __init__(self, firstname, middlename, lastname, nickname, title, company, address, home, mobile, work, fax,
