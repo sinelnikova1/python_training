@@ -88,3 +88,128 @@ class ContactsHelper:
         wd.find_element_by_name("submit").click()
         self.app.return_to_home_page()
 
+    def delete_first_contact(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.app.return_to_home_page()
+
+    def delete_specific_contact(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select specific contacts with serial number in list (удаление по порядковому номеру в списке)
+        wd.find_element_by_xpath("(//input[@name='selected[]'])[2]").click()
+        # submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.app.return_to_home_page()
+
+    def delete_all_empty_contacts(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select all empty contacts (empty contacts in the top)
+        checkboxes = wd.find_elements_by_class_name('group')
+        for checkbox in checkboxes:
+            if not checkbox.is_selected():
+                checkbox.click()
+        # submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.app.return_to_home_page()
+
+    def delete_all_contacts(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select all contacts
+        wd.find_element_by_id("MassCB").click()
+        # submit deletion
+        wd.find_element_by_xpath("//input[@value='Delete']").click()
+        wd.switch_to_alert().accept()
+        self.app.return_to_home_page()
+
+    def send_all_contacts(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select all contacts
+        wd.find_element_by_id("MassCB").click()
+        # send e-mail (open email client)
+        wd.find_element_by_xpath("//input[@value='Send e-Mail']").click()
+        self.app.return_to_home_page()
+
+    def send_first_contacts(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select first contacts if contact not empty
+        wd.find_element_by_name("selected[]").click()
+        # send e-mail (open email client)
+        wd.find_element_by_xpath("//input[@value='Send e-Mail']").click()
+        self.app.return_to_home_page()
+
+    def add_first_contact_to_group(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select first contacts if contact not empty
+        wd.find_element_by_name("selected[]").click()
+        # submit add to group
+        wd.find_element_by_name("add").click()
+        self.app.return_to_home_page()
+
+    def add_all_contacts_to_group(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select all contacts
+        wd.find_element_by_id("MassCB").click()
+        # submit add to group
+        wd.find_element_by_name("add").click()
+        self.app.return_to_home_page()
+
+    def modify_fio_from_details(self, contacts):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select first contacts if contact not empty
+        wd.find_element_by_name("selected[]").click()
+        # click view details
+        wd.find_element_by_xpath("//img[@alt='Details']").click()
+        wd.find_element_by_name("modifiy").click()
+        # fill basic information of person
+        wd.find_element_by_name("firstname").click()
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys(contacts.firstname)
+        wd.find_element_by_name("middlename").click()
+        wd.find_element_by_name("middlename").clear()
+        wd.find_element_by_name("middlename").send_keys(contacts.middlename)
+        wd.find_element_by_name("lastname").click()
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys(contacts.lastname)
+        # update contact
+        wd.find_element_by_name("update").click()
+        self.app.return_to_home_page()
+
+    def update_email(self, contacts):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select first contacts if contact not empty
+        wd.find_element_by_name("selected[]").click()
+        # click view details
+        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        # fill basic information of person
+        wd.find_element_by_name("email").click()
+        wd.find_element_by_name("email").clear()
+        wd.find_element_by_name("email").send_keys(contacts.email)
+        # update contact
+        wd.find_element_by_name("update").click()
+        self.app.return_to_home_page()
+
+    def delete_first_contact_from_edit_page(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        # select first contact
+        wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
+        self.app.return_to_home_page()
