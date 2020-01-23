@@ -3,7 +3,7 @@ from model.group import Group
 
 def test_add_group(app):
     app.session.login(username="admin", password="secret")
-    app.group.create(Group(name="first group", header="LOGO of my group", footer="bye"))
+    app.group.create(Group(name="group", header="group #3", footer="ok"))
     app.session.logout()
 
 

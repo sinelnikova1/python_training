@@ -35,6 +35,39 @@ class GroupHelper:
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
 
+    def delete_specific_group(self):
+        wd = self.app.wd
+        self.return_to_groups_page()
+        # select specific group with serial number in list (удаление по порядковому номеру в списке)
+        wd.find_element_by_xpath("(//input[@name='selected[]'])[2]").click()
+        # submit deletion
+        wd.find_element_by_name("delete").click()
+        self.return_to_groups_page()
+
+    def delete_all_empty_group(self):
+        wd = self.app.wd
+        self.return_to_groups_page()
+        # select all empty groups (empty groups in the top)
+        checkboxes = wd.find_elements_by_class_name('group')
+        for checkbox in checkboxes:
+            if not checkbox.is_selected():
+                checkbox.click()
+        # submit deletion
+        wd.find_element_by_name("delete").click()
+        self.return_to_groups_page()
+
+    def delete_all_group(self):
+        wd = self.app.wd
+        self.return_to_groups_page()
+        # select all groups
+        checkboxes = wd.find_elements_by_css_selector('.group > input')
+        for checkbox in checkboxes:
+            if not checkbox.is_selected():
+                checkbox.click()
+        # submit deletion
+        wd.find_element_by_name("delete").click()
+        self.return_to_groups_page()
+
     def return_to_groups_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("groups").click()
