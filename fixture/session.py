@@ -16,5 +16,31 @@ class SessionHelper:
     def logout(self):
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()
-        self.app.wd.find_element_by_name("user")
+        #self.app.wd.find_element_by_name("user")
+
+    def ensure_logout(self):
+        wd = self.app.wd
+        # если есть хотя бы один элемент логаута, то выполнить логаут
+        if self.is_logged_in():
+            self.logout()
+
+    def is_logged_in(self):
+        wd = self.app.wd
+        return len(wd.find_elements_by_link_text("Logout")) > 0
+
+    def is_logged_in_as(self, username):
+        wd = self.app.wd
+        return wd.find_element_by_xpath("//div[@id='top']/form/b").text == "("+username+")"
+
+    def ensure_login(self, username, password):
+        wd = self.app.wd
+        # если мы вошли в систему, то проверить, что вход под нужным юзером и осуществить вход
+        if self.is_logged_in():
+            if self.is_logged_in_as(username):
+                return
+            # если пользователь не тот, то разлогиниваемся и пробуем логинится снова
+            else:
+                self.logout()
+        self.login(username, password)
+
 

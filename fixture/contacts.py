@@ -13,6 +13,13 @@ class ContactsHelper:
     def add_information_of_person(self, contacts):
         wd = self.app.wd
         self.open_add_contact_page()
+        self.fill_contacts_form(contacts)
+        # submit to send form
+        wd.find_element_by_name("submit").click()
+        self.app.return_to_home_page()
+
+    def fill_contacts_form(self, contacts):
+        wd = self.app.wd
         # fill basic information of person
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -84,9 +91,6 @@ class ContactsHelper:
         wd.find_element_by_name("notes").click()
         wd.find_element_by_name("notes").clear()
         wd.find_element_by_name("notes").send_keys(contacts.notes)
-        # submit to send form
-        wd.find_element_by_name("submit").click()
-        self.app.return_to_home_page()
 
     def delete_first_contact(self):
         wd = self.app.wd
