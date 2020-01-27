@@ -108,11 +108,11 @@ class ContactsHelper:
 
     def select_all_contacts(self):
         wd = self.app.wd
+        self.app.return_to_home_page()
         wd.find_element_by_id("MassCB").click()
 
     def send_all_contacts(self):
         wd = self.app.wd
-        self.app.return_to_home_page()
         self.select_all_contacts()
         # send e-mail (open email client)
         wd.find_element_by_xpath("//input[@value='Send e-Mail']").click()
@@ -129,7 +129,6 @@ class ContactsHelper:
     def add_first_contact_to_group(self):
         wd = self.app.wd
         self.app.return_to_home_page()
-        # select first contacts if contact not empty
         self.select_first_contact()
         # submit add to group
         wd.find_element_by_name("add").click()
@@ -137,7 +136,7 @@ class ContactsHelper:
 
     def add_all_contacts_to_group(self):
         wd = self.app.wd
-        self.app.return_to_home_page()
+        self.open_add_contact_page()
         self.select_all_contacts()
         # submit add to group
         wd.find_element_by_name("add").click()
@@ -164,3 +163,15 @@ class ContactsHelper:
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
         self.app.return_to_home_page()
+
+    def add_empty_contact(self, contacts):
+        wd = self.app.wd
+        self.open_add_contact_page()
+        # submit to send form
+        wd.find_element_by_name("submit").click()
+        self.app.return_to_home_page()
+
+    def count(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        return len(wd.find_elements_by_name("selected[]"))
