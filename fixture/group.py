@@ -94,6 +94,7 @@ class GroupHelper:
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
 
+    # new_group_data -
     def modify_first_group(self, new_group_data):
         wd = self.app.wd
         self.return_to_groups_page()
