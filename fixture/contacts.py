@@ -1,4 +1,5 @@
 from selenium.webdriver.support.select import Select
+from model.contacts import Contacts
 
 
 class ContactsHelper:
@@ -85,18 +86,19 @@ class ContactsHelper:
         wd.switch_to_alert().accept()
         self.app.return_to_home_page()
 
-    def delete_all_empty_contacts(self):
-        wd = self.app.wd
-        self.app.return_to_home_page()
-        # select all empty contacts (empty contacts in the top)
-        checkboxes = wd.find_elements_by_class_name('group')
-        for checkbox in checkboxes:
-            if not checkbox.is_selected():
-                checkbox.click()
+# тест не работает
+#    def delete_all_empty_contacts(self):
+ #       wd = self.app.wd
+  #      self.app.return_to_home_page()
+   #     # select all empty contacts (empty contacts in the top)
+    #    checkboxes = wd.find_elements_by_name("selected[]")
+     #   for checkbox in checkboxes:
+      #      if not checkbox.is_selected():
+       #         checkbox.click()
         # submit deletion
-        wd.find_element_by_xpath("//input[@value='Delete']").click()
-        wd.switch_to_alert().accept()
-        self.app.return_to_home_page()
+        #wd.find_element_by_xpath("//input[@value='Delete']").click()
+        #wd.switch_to_alert().accept()
+        #self.app.return_to_home_page()
 
     def delete_all_contacts(self):
         wd = self.app.wd
@@ -176,3 +178,15 @@ class ContactsHelper:
         wd = self.app.wd
         self.app.return_to_home_page()
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_contacts_list(self):
+        wd = self.app.wd
+        self.app.return_to_home_page()
+        contacts = []
+        for element in wd.find_elements_by_name("entry"):
+            cells = element.find_elements_by_tag_name("td")
+            last_name = cells[1].text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            # contacts = list, в этот список будет добавляться найденные значения
+            contacts.append(Contacts(lastname=last_name, id=id))
+        return contacts
