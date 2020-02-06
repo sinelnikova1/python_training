@@ -126,11 +126,15 @@ class GroupHelper:
         self.open_group_page()
         return len(wd.find_elements_by_name("selected[]"))
 
-    def count_empty(self):
-        wd = self.app.wd
-        self.open_group_page()
-        checkboxes = wd.find_elements_by_class_name('group')
-        return len(checkboxes)
+# не работает
+   # def count_empty(self):
+    #    wd = self.app.wd
+   #     self.open_group_page()
+    #    for elements in wd.find_elements_by_class_name ("group").value_of_css_property("Selected ( )"):
+    #        checkboxes = elements.checkboxes
+     #       if not elements.is_selected():
+     #           elements.click()
+#        return len(checkboxes)
 
     def get_group_list(self):
         wd = self.app.wd
