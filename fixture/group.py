@@ -8,7 +8,8 @@ class GroupHelper:
 
     def open_group_page(self):
         wd = self.app.wd
-        # если уже находимся на этой странице c кнопкой new, то ничего делать не нужно (не нужно заново её открывать)
+        # если уже находимся на этой странице c кнопкой new, то ничего делать не нужно
+        # (не нужно заново её открывать)
         if not (wd.current_url.endswith("/group.php") and len(wd.find_elements_by_name("new")) > 0):
             wd.find_element_by_link_text("groups").click()
 
@@ -27,6 +28,9 @@ class GroupHelper:
         # submit group creation
         wd.find_element_by_name("submit").click()
         self.return_to_groups_page()
+        # после выполнения метода сбрасываем кеш, т.к. метод вносит изменения
+        # (т.е. обновляем его, и последующий вызов метода get_group_list будет в новый кеш записываться)
+        self.group_cache = None
 
     def change_field_value(self, field_name, text):
         wd = self.app.wd
@@ -42,6 +46,7 @@ class GroupHelper:
         # submit deletion
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
+        self.group_cache = None
 
     def delete_specific_group(self):
         wd = self.app.wd
@@ -51,6 +56,7 @@ class GroupHelper:
         # submit deletion
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
+        self.group_cache = None
 
     def delete_all_empty_group(self):
         wd = self.app.wd
@@ -63,6 +69,7 @@ class GroupHelper:
         # submit deletion
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
+        self.group_cache = None
 
     def delete_all_group(self):
         wd = self.app.wd
@@ -75,17 +82,7 @@ class GroupHelper:
         # submit deletion
         wd.find_element_by_name("delete").click()
         self.return_to_groups_page()
-
-    def edit_first_group(self, group):
-        wd = self.app.wd
-        self.return_to_groups_page()
-        self.select_first_name()
-        # edit group
-        wd.find_element_by_name("edit").click()
-        self.fill_group_form(group)
-        # update group
-        wd.find_element_by_name("update").click()
-        self.return_to_groups_page()
+        self.group_cache = None
 
     def edit_specific_group(self, group):
         wd = self.app.wd
@@ -98,6 +95,7 @@ class GroupHelper:
         # update group
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
+        self.group_cache = None
 
     # new_group_data -
     def modify_first_group(self, new_group_data):
@@ -111,6 +109,7 @@ class GroupHelper:
         # submit modification
         wd.find_element_by_name("update").click()
         self.return_to_groups_page()
+        self.group_cache = None
 
     def select_first_name(self):
         wd = self.app.wd
@@ -136,13 +135,19 @@ class GroupHelper:
      #           elements.click()
 #        return len(checkboxes)
 
+    # кешируем вызов списка (чтобы оптимизировать загрузку списка в каждом тесте)
+    group_cache = None
+
     def get_group_list(self):
-        wd = self.app.wd
-        self.open_group_page()
-        groups = []
-        for element in wd.find_elements_by_css_selector("span.group"):
-            text = element.text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            groups.append(Group(name = text, id = id))
-        return groups
+        if self.group_cache is None:
+            wd = self.app.wd
+            self.open_group_page()
+            self.group_cache = []
+            for element in wd.find_elements_by_css_selector("span.group"):
+                text = element.text
+                id = element.find_element_by_name("selected[]").get_attribute("value")
+                self.group_cache.append(Group(name = text, id = id))
+        # возвращаем не сам кеш, т.к. после тестов он может измениться, а копию кеша, и с ним работать
+        return list(self.group_cache) #list в данном случае и есть копия кеша (кеш записывается в список)
+
 
