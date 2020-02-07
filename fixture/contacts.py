@@ -19,6 +19,7 @@ class ContactsHelper:
         # submit to send form
         wd.find_element_by_name("submit").click()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def change_field_value(self, field_name, text):
         wd = self.app.wd
@@ -71,6 +72,7 @@ class ContactsHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def select_first_contact(self):
         wd = self.app.wd
@@ -85,6 +87,7 @@ class ContactsHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
 # тест не работает
 #    def delete_all_empty_contacts(self):
@@ -108,6 +111,7 @@ class ContactsHelper:
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def select_all_contacts(self):
         wd = self.app.wd
@@ -136,6 +140,7 @@ class ContactsHelper:
         # submit add to group
         wd.find_element_by_name("add").click()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def add_all_contacts_to_group(self):
         wd = self.app.wd
@@ -144,6 +149,7 @@ class ContactsHelper:
         # submit add to group
         wd.find_element_by_name("add").click()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def modify_data_from_details(self, new_contact_data):
         wd = self.app.wd
@@ -157,6 +163,7 @@ class ContactsHelper:
         # update contact
         wd.find_element_by_name("update").click()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def delete_first_contact_from_edit_page(self):
         wd = self.app.wd
@@ -166,6 +173,7 @@ class ContactsHelper:
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def add_empty_contact(self, contacts):
         wd = self.app.wd
@@ -173,20 +181,25 @@ class ContactsHelper:
         # submit to send form
         wd.find_element_by_name("submit").click()
         self.app.return_to_home_page()
+        self.contact_cache = None
 
     def count(self):
         wd = self.app.wd
         self.app.return_to_home_page()
         return len(wd.find_elements_by_name("selected[]"))
 
+    # кешируем вызов списка (чтобы оптимизировать загрузку списка в каждом тесте)
+    contact_cache = None
+
     def get_contacts_list(self):
-        wd = self.app.wd
-        self.app.return_to_home_page()
-        contacts = []
-        for element in wd.find_elements_by_name("entry"):
-            cells = element.find_elements_by_tag_name("td")
-            last_name = cells[1].text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            # contacts = list, в этот список будет добавляться найденные значения
-            contacts.append(Contacts(lastname=last_name, id=id))
-        return contacts
+        if self.contact_cache is None:
+            wd = self.app.wd
+            self.app.return_to_home_page()
+            self.contact_cache = []
+            for element in wd.find_elements_by_name("entry"):
+                cells = element.find_elements_by_tag_name("td")
+                last_name = cells[1].text
+                id = element.find_element_by_name("selected[]").get_attribute("value")
+                # contacts = list, в этот список будет добавляться найденные значения
+                self.contact_cache.append(Contacts(lastname=last_name, id=id))
+        return list(self.contact_cache)
