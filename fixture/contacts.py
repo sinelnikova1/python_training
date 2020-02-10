@@ -64,25 +64,23 @@ class ContactsHelper:
         self.change_field_value("phone2", contacts.phone2)
         self.change_field_value("notes", contacts.notes)
 
-    def delete_first_contact(self):
-        wd = self.app.wd
-        self.app.return_to_home_page()
-        self.select_first_contact()
-        # submit deletion
-        wd.find_element_by_xpath("//input[@value='Delete']").click()
-        wd.switch_to_alert().accept()
-        self.app.return_to_home_page()
-        self.contact_cache = None
-
     def select_first_contact(self):
         wd = self.app.wd
-        wd.find_element_by_name("selected[]").click()
+        self.select_contact_by_index(0)
 
-    def delete_specific_contact(self):
+    def select_contact_by_index(self, index):
+        wd = self.app.wd
+        # находим все элементы с данным именем, и из них выбираем элемент с нужным индексом
+        wd.find_elements_by_name("selected[]")[index].click()
+
+    def delete_first_contact(self):
+        self.delete_contact_by_index(0)
+        self.contact_cache = None
+
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.app.return_to_home_page()
-        # select specific contacts with serial number in list (удаление по порядковому номеру в списке)
-        wd.find_element_by_xpath("(//input[@name='selected[]'])[2]").click()
+        self.select_contact_by_index(index)
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to_alert().accept()
@@ -125,18 +123,22 @@ class ContactsHelper:
         wd.find_element_by_xpath("//input[@value='Send e-Mail']").click()
         self.app.return_to_home_page()
 
-    def send_first_contacts(self):
+    def send_some_contacts(self, index):
         wd = self.app.wd
         self.app.return_to_home_page()
-        self.select_first_contact()
+        self.select_contact_by_index(index)
         # send e-mail (open email client)
         wd.find_element_by_xpath("//input[@value='Send e-Mail']").click()
         self.app.return_to_home_page()
 
     def add_first_contact_to_group(self):
+        self.add_some_contact_to_group(0)
+        self.contact_cache = None
+
+    def add_some_contact_to_group(self, index):
         wd = self.app.wd
         self.app.return_to_home_page()
-        self.select_first_contact()
+        self.select_contact_by_index(index)
         # submit add to group
         wd.find_element_by_name("add").click()
         self.app.return_to_home_page()
@@ -151,26 +153,24 @@ class ContactsHelper:
         self.app.return_to_home_page()
         self.contact_cache = None
 
-    def modify_data_from_details(self, new_contact_data):
+    def modify_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.app.return_to_home_page()
-        self.select_first_contact()
+        self.select_contact_by_index(index)
         # click view details
-        wd.find_element_by_xpath("//img[@alt='Details']").click()
+        wd.find_elements_by_xpath("//img[@alt='Details']")[index].click()
         wd.find_element_by_name("modifiy").click()
-        # fill basic information of person
         self.fill_contacts_form(new_contact_data)
-        # update contact
         wd.find_element_by_name("update").click()
         self.app.return_to_home_page()
         self.contact_cache = None
 
-    def delete_first_contact_from_edit_page(self):
+    def delete_some_contact_from_edit_page(self, index):
         wd = self.app.wd
         self.app.return_to_home_page()
-        self.select_first_contact()
-        # submit deletion
+        self.select_contact_by_index(index)
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        # submit deletion
         wd.find_element_by_xpath("(//input[@name='update'])[3]").click()
         self.app.return_to_home_page()
         self.contact_cache = None
