@@ -46,7 +46,3 @@ class Contacts:
             return int(gr.id)
         else:
             return maxsize
-
-
-
-

@@ -2,7 +2,7 @@ from model.contacts import Contacts
 
 
 def test_delete_first_contact(app):
-    contact = Contacts(firstname="Alina", middlename="Ivanovna", lastname="Lallala")
+    contact = Contacts(firstname="Alina", middlename="Ivanovna", lastname="Lallala" , email="gghf@urte.tu")
     if app.contacts.count() == 0:
         app.contacts.add_information_of_person(contact)
     old_contacts = app.contacts.get_contacts_list()

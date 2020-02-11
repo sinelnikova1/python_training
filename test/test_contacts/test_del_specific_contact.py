@@ -3,7 +3,7 @@ from random import randrange
 
 
 def test_delete_specific_contact(app):
-    contact = Contacts(firstname="Alina", middlename="Ivanovna", lastname="Lallala")
+    contact = Contacts(firstname="Alina", middlename="Ivanovna", lastname="Lallala", email="gghf@urte.tu")
     if app.contacts.count() == 0:
         app.contacts.add_information_of_person(contact)
     old_contacts = app.contacts.get_contacts_list()
