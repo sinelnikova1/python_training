@@ -201,9 +201,8 @@ class ContactsHelper:
                 cells = element.find_elements_by_tag_name("td")
                 last_name = cells[1].text
                 id = element.find_element_by_name("selected[]").get_attribute("value")
-                all_phones = cells[5].text.splitlines()
-                self.contact_cache.append(Contacts(lastname=last_name, id=id, home=all_phones[0],
-                                                   mobile=all_phones[1], work=all_phones[2], phone2=all_phones[3]))
+                all_phones = cells[5].text
+                self.contact_cache.append(Contacts(lastname=last_name, id=id, all_phones_from_home_page=all_phones))
         # contacts = list, в этот список будет добавляться найденные значения
         return list(self.contact_cache)
 
