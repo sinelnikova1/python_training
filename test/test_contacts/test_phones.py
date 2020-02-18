@@ -15,7 +15,7 @@ def test_phones_on_contact_view_page(app):
 
 #очищаем лишние символы
 def clear(s):
-    re.sub("[() -]", "", s)
+    return re.sub("[() -]", "", s)
 
 
 def merge_phones_like_on_home_page(contacts):
