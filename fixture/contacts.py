@@ -200,9 +200,14 @@ class ContactsHelper:
             for element in wd.find_elements_by_name("entry"):
                 cells = element.find_elements_by_tag_name("td")
                 last_name = cells[1].text
+                first_name = cells[2].text
                 id = element.find_element_by_name("selected[]").get_attribute("value")
+                address = cells[3].text
                 all_phones = cells[5].text
-                self.contact_cache.append(Contacts(lastname=last_name, id=id, all_phones_from_home_page=all_phones))
+                all_emails = cells[4].text
+                self.contact_cache.append(Contacts(lastname=last_name, firstname=first_name, address=address,
+                                                   id=id, all_phones_from_home_page=all_phones,
+                                                   all_emails_from_home_page = all_emails))
         # contacts = list, в этот список будет добавляться найденные значения
         return list(self.contact_cache)
 
@@ -224,12 +229,13 @@ class ContactsHelper:
         wd = self.app.wd
         self.open_contact_to_edit_by_index(index)
         lastname = wd.find_element_by_name("lastname").get_attribute("value")
+        firstname = wd.find_element_by_name("firstname").get_attribute("value")
         id = wd.find_element_by_name("id").get_attribute("value")
         homephone = wd.find_element_by_name("home").get_attribute("value")
         workphone = wd.find_element_by_name("work").get_attribute("value")
         mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
         secondaryphone = wd.find_element_by_name("phone2").get_attribute("value")
-        return Contacts(lastname=lastname, id=id, home=homephone,
+        return Contacts(lastname=lastname, firstname=firstname, id=id, home=homephone,
                         work=workphone, mobile=mobilephone, phone2=secondaryphone)
 
     def get_contacts_from_view_page(self, index):
@@ -241,4 +247,22 @@ class ContactsHelper:
         mobilephone = re.search("M: (.*)", text).group(1)
         secondaryphone = re.search("P: (.*)", text).group(1)
         return Contacts(home=homephone, work=workphone, mobile=mobilephone, phone2=secondaryphone)
+
+    def get_contact_email_from_edit_page(self, index):
+        wd = self.app.wd
+        self.open_contact_to_edit_by_index(index)
+        lastname = wd.find_element_by_name("lastname").get_attribute("value")
+        id = wd.find_element_by_name("id").get_attribute("value")
+        email = wd.find_element_by_name("email").get_attribute("value")
+        email2 = wd.find_element_by_name("email2").get_attribute("value")
+        email3 = wd.find_element_by_name("email3").get_attribute("value")
+        return Contacts(lastname=lastname, id=id, email=email, email2=email2, email3=email3)
+
+
+    def get_contact_address_from_edit_page(self, index):
+        wd = self.app.wd
+        self.open_contact_to_edit_by_index(index)
+        address = wd.find_element_by_name("lastname").get_attribute("value")
+        return Contacts(address=address)
+
 
