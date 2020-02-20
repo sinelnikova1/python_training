@@ -5,7 +5,7 @@ import string
 
 
 def random_string(prefix, maxlen):
-    symbols = string.ascii_letters + string.digits + string.punctuation + " "*10
+    symbols = string.ascii_letters + string.digits + string.punctuation
     # будет сгенерирована случайная длина случайных символов не превышающая максимальную
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
@@ -35,3 +35,4 @@ def test_add_group(app, group):
     # проверка сравнения старого и нового списка с добавлением элемента
     old_groups.append(group)
     assert sorted(old_groups, key=Group.id_or_max) == sorted(new_groups, key=Group.id_or_max)
+
