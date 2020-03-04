@@ -52,7 +52,6 @@ class GroupHelper:
 
     def select_group_by_id(self, id):
         wd = self.app.wd
-        # находим все элементы с данным именем, и из них выбираем элемент с нужным индексом
         wd.find_element_by_css_selector("input[value='%s']" %id).click()
 
     def delete_first_group(self):

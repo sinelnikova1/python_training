@@ -15,7 +15,7 @@ db = DbFixture(host="127.0.0.1", name="addressbook", user="root", password="")
 
 #контакты
 try:
-    contacts = db.get_contact_list()
+    contacts = db.get_contacts_list()
     for contact in contacts:
         print(contact)
     print(len(contacts))
