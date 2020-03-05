@@ -23,7 +23,7 @@ def test_modify_fio(app, db, check_ui):
     assert len(old_contacts) == len(new_contacts)
     assert old_contacts == new_contacts
     if check_ui:
-        assert sorted(new_contacts, key=Contacts.id_or_max) == sorted(app.Contacts.get_group_list(),
+        assert sorted(new_contacts, key=Contacts.id_or_max) == sorted(app.Contacts.get_contacts_list(),
                                                                       key=Contacts.id_or_max)
 
 
