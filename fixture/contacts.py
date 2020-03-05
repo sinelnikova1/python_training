@@ -224,6 +224,28 @@ class ContactsHelper:
         self.app.return_to_home_page()
         return len(wd.find_elements_by_name("selected[]"))
 
+    def add_contact_to_group_by_id(self, contact_id, group_id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_contact_by_id(contact_id)
+        wd.find_element_by_name("to_group").find_element_by_css_selector("option[value='%s']" % group_id).click()
+        wd.find_element_by_name("add").click()
+        self.app.open_home_page()
+
+    def delete_contact_from_group(self, contact_id, group_id):
+        wd = self.app.wd
+        self.app.open_home_page()
+        self.select_contact_by_id(contact_id)
+        self.open_group_list_to_edit(group_id)
+        wd.find_element_by_name("remove").click()
+        self.app.open_home_page()
+
+    def open_group_list_to_edit(self, group_id):
+        wd = self.app.wd
+        element = wd.find_element_by_name("group")
+        select = Select(element)
+        select.select_by_value("%s" % group_id)
+
     # кешируем вызов списка (чтобы оптимизировать загрузку списка в каждом тесте)
     contact_cache = None
 
