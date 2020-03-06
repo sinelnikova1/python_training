@@ -14,8 +14,8 @@ def test_add_contact_to_group(app, db):
         app.group.create(group)
     random_group = random.choice(db.get_group_list())
     random_contact = random.choice(db.get_contacts_list())
-    if random_contact in orm.get_contacts_not_in_group(random_group):
-        app.contacts.add_contact_to_group_by_id(random_contact.id, random_group.id)
+    if random_contact in orm.get_contacts_in_group(random_group):
+        app.contacts.delete_contact_from_group(random_contact.id, random_group.id)
     app.contacts.add_contact_to_group_by_id(random_contact.id, random_group.id)
     contact_in_group = orm.get_contacts_in_group(random_group)
     contact_not_in_group = orm.get_contacts_not_in_group(random_group)
