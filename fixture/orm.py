@@ -26,7 +26,7 @@ class ORMFixture:
 
     def __init__(self, host, name, user, password):
         self.db.bind(provider='mysql', host=host, database=name, user=user, password=password) #conv = decoders - не работает, без него работает)
-        self.db.generate_mapping()
+        self.db.provider.generate_mapping()
         sql_debug(True)
 
     def convert_groups_to_model(self, groups):
