@@ -1,0 +1,430 @@
+{
+  "7ba5d29733a690fd3f20a03f7021da44" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "efe32c89a25d8703",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert [396:, 397:, ...емляковrererа] == [397:, 392:las...емляковrererа]\n  At index 0 diff: 396: != 397:\n  Use -v to get the full diff",
+      "time" : {
+        "start" : 1584644236280,
+        "stop" : 1584644238876,
+        "duration" : 2596
+      }
+    } ]
+  },
+  "1c829525b713c215b9ca90afaa5abb02" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3b3249a6b022780a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644167054,
+        "stop" : 1584644173493,
+        "duration" : 6439
+      }
+    } ]
+  },
+  "588c94e58d0d9d07191269baa514fcc0" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "30cd92dcc9c04ee",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644259696,
+        "stop" : 1584644265843,
+        "duration" : 6147
+      }
+    } ]
+  },
+  "b4006e08c9ed5e91501f3d91d13439a9" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "15667ee8febdd98f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644253383,
+        "stop" : 1584644259522,
+        "duration" : 6139
+      }
+    } ]
+  },
+  "54ac3762b9d1b5a1d45108c5ed8b2ec3" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "28e4e1c94c701109",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (6 + 1) == 6\n +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\n +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\n +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\n +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts",
+      "time" : {
+        "start" : 1584644197966,
+        "stop" : 1584644204154,
+        "duration" : 6188
+      }
+    } ]
+  },
+  "8dacc58dd9dacd1247b58ed330d26090" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "b32fa60e541bc75a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644245975,
+        "stop" : 1584644247286,
+        "duration" : 1311
+      }
+    } ]
+  },
+  "0ae3520c43657b81d94469ec46469821" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "74cabb98792bf31c",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'WebDriver' object has no attribute 'switch_to_alert'",
+      "time" : {
+        "start" : 1584644220603,
+        "stop" : 1584644222344,
+        "duration" : 1741
+      }
+    } ]
+  },
+  "a792833794a4c81c54695034926d9189" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "456ad99ca383dc8c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644166689,
+        "stop" : 1584644166915,
+        "duration" : 226
+      }
+    } ]
+  },
+  "047cbf17d94f4a112c9cf31cadbb710a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "89d0338a3a252970",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644173624,
+        "stop" : 1584644179637,
+        "duration" : 6013
+      }
+    } ]
+  },
+  "2f2797d5af0ab5a69d8c7bc8b967227b" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "2c7ff6afda67fd8e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644217105,
+        "stop" : 1584644219229,
+        "duration" : 2124
+      }
+    } ]
+  },
+  "6e707e8470b9e2c0be9f3808980ed848" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c220b161ac1f2c44",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644249283,
+        "stop" : 1584644252111,
+        "duration" : 2828
+      }
+    } ]
+  },
+  "0046d3657f3449fbc00da1d1fc18b190" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "debf65435fa38d80",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (6 + 1) == 6\n +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\n +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\n +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\n +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts",
+      "time" : {
+        "start" : 1584644185956,
+        "stop" : 1584644191492,
+        "duration" : 5536
+      }
+    } ]
+  },
+  "b717674a87f6662cb21ac86e556e7601" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "59ac5d751353f81",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'WebDriver' object has no attribute 'switch_to_alert'",
+      "time" : {
+        "start" : 1584644228582,
+        "stop" : 1584644229998,
+        "duration" : 1416
+      }
+    } ]
+  },
+  "a56fca1ba7bcd636cc941a61e5e12d29" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d0d3e2871f441ba6",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644219381,
+        "stop" : 1584644220453,
+        "duration" : 1072
+      }
+    } ]
+  },
+  "cc7b75a85ec2dcf5a83c63983f31b56f" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c0019434f906ee59",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644179781,
+        "stop" : 1584644185798,
+        "duration" : 6017
+      }
+    } ]
+  },
+  "15a2630c45853278df222235851ce70e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "559ccb1d204f5daf",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'WebDriver' object has no attribute 'switch_to_alert'",
+      "time" : {
+        "start" : 1584644239037,
+        "stop" : 1584644239740,
+        "duration" : 703
+      }
+    } ]
+  },
+  "823ed3908d7836c7e653a8b23d2697ec" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "1e386ad85f46e717",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (6 + 1) == 6\n +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\n +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\n +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\n +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts",
+      "time" : {
+        "start" : 1584644204316,
+        "stop" : 1584644210526,
+        "duration" : 6210
+      }
+    } ]
+  },
+  "89adbdab43e48a1d2e9ed03c3ddd0fe3" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "d2bf295e90cbc287",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644252262,
+        "stop" : 1584644252880,
+        "duration" : 618
+      }
+    } ]
+  },
+  "a75bab25f3c0cab36363dc8b12b053d6" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c2a82109eab36a78",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (6 + 1) == 6\n +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\n +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\n +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\n +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts",
+      "time" : {
+        "start" : 1584644210694,
+        "stop" : 1584644216949,
+        "duration" : 6255
+      }
+    } ]
+  },
+  "319a321a4e905dba390270339722d952" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "eb4883f65750f093",
+      "status" : "passed",
+      "time" : {
+        "start" : 1584644247342,
+        "stop" : 1584644249227,
+        "duration" : 1885
+      }
+    } ]
+  },
+  "cbe5904f9de334d9a98d170602d31e0a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e94cfc5e4d0b615a",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'NoneType' object has no attribute 'group'",
+      "time" : {
+        "start" : 1584644252937,
+        "stop" : 1584644253315,
+        "duration" : 378
+      }
+    } ]
+  },
+  "8ea09563ea201ad1b628055beb644e09" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "9b7b77b3df587059",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert (6 + 1) == 6\n +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\n +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\n +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\n +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts",
+      "time" : {
+        "start" : 1584644191677,
+        "stop" : 1584644197796,
+        "duration" : 6119
+      }
+    } ]
+  }
+}

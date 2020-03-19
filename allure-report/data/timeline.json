@@ -1,0 +1,879 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "ASinelnikova",
+    "children" : [ {
+      "name" : "14004-MainThread",
+      "children" : [ {
+        "name" : "test_add_contact[None:lastname1]",
+        "uid" : "3b3249a6b022780a",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644167054,
+          "stop" : 1584644173493,
+          "duration" : 6439
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname1" ]
+      }, {
+        "name" : "test_phones_on_home_page",
+        "uid" : "d2bf295e90cbc287",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644252262,
+          "stop" : 1584644252880,
+          "duration" : 618
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_phones_on_contact_view_page",
+        "uid" : "e94cfc5e4d0b615a",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644252937,
+          "stop" : 1584644253315,
+          "duration" : 378
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname OGU2W~99F5]",
+        "uid" : "c2a82109eab36a78",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644210694,
+          "stop" : 1584644216949,
+          "duration" : 6255
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname OGU2W~99F5" ]
+      }, {
+        "name" : "test_add_all_contacts_to_group",
+        "uid" : "456ad99ca383dc8c",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644166689,
+          "stop" : 1584644166915,
+          "duration" : 226
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_first_contact_to_group",
+        "uid" : "d0d3e2871f441ba6",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644219381,
+          "stop" : 1584644220453,
+          "duration" : 1072
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname H'|6m\"PZ>BD,]",
+        "uid" : "28e4e1c94c701109",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644197966,
+          "stop" : 1584644204154,
+          "duration" : 6188
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname H'|6m\"PZ>BD," ]
+      }, {
+        "name" : "test_add_empty_contact",
+        "uid" : "2c7ff6afda67fd8e",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644217105,
+          "stop" : 1584644219229,
+          "duration" : 2124
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_fio",
+        "uid" : "c220b161ac1f2c44",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644249283,
+          "stop" : 1584644252111,
+          "duration" : 2828
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_specific_contact",
+        "uid" : "559ccb1d204f5daf",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644239037,
+          "stop" : 1584644239740,
+          "duration" : 703
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_all_contacts",
+        "uid" : "74cabb98792bf31c",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644220603,
+          "stop" : 1584644222344,
+          "duration" : 1741
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_some_contacts",
+        "uid" : "30cd92dcc9c04ee",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644259696,
+          "stop" : 1584644265843,
+          "duration" : 6147
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_emails_on_home_page",
+        "uid" : "b32fa60e541bc75a",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644245975,
+          "stop" : 1584644247286,
+          "duration" : 1311
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname o1D3G]",
+        "uid" : "1e386ad85f46e717",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644204316,
+          "stop" : 1584644210526,
+          "duration" : 6210
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname o1D3G" ]
+      }, {
+        "name" : "test_add_contact[None:lastname t[?E]",
+        "uid" : "debf65435fa38d80",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644185956,
+          "stop" : 1584644191492,
+          "duration" : 5536
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname t[?E" ]
+      }, {
+        "name" : "test_add_contact[None:lastname wK[T8n=R%I5L/]",
+        "uid" : "9b7b77b3df587059",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644191677,
+          "stop" : 1584644197796,
+          "duration" : 6119
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname wK[T8n=R%I5L/" ]
+      }, {
+        "name" : "test_delete_first_contact",
+        "uid" : "59ac5d751353f81",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644228582,
+          "stop" : 1584644229998,
+          "duration" : 1416
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_del_from_edit_page",
+        "uid" : "efe32c89a25d8703",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644236280,
+          "stop" : 1584644238876,
+          "duration" : 2596
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_general_info_on_home_page",
+        "uid" : "eb4883f65750f093",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644247342,
+          "stop" : 1584644249227,
+          "duration" : 1885
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:]",
+        "uid" : "c0019434f906ee59",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644179781,
+          "stop" : 1584644185798,
+          "duration" : 6017
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:" ]
+      }, {
+        "name" : "test_add_contact[None:lastname2]",
+        "uid" : "89d0338a3a252970",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644173624,
+          "stop" : 1584644179637,
+          "duration" : 6013
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname2" ]
+      }, {
+        "name" : "test_send_all_contacts",
+        "uid" : "15667ee8febdd98f",
+        "parentUid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072",
+        "status" : "passed",
+        "time" : {
+          "start" : 1584644253383,
+          "stop" : 1584644259522,
+          "duration" : 6139
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f2da1c5e0ad79e8978c4c5f7ecdf6072"
+    }, {
+      "name" : "9536-MainThread",
+      "children" : [ {
+        "name" : "test_del_from_edit_page",
+        "uid" : "b7dca13f957a3330",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644054708,
+          "stop" : 1584644054708,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_phones_on_contact_view_page",
+        "uid" : "66eef8a98d5fb917",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644068232,
+          "stop" : 1584644068232,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_all_contacts",
+        "uid" : "110a597867b08b8d",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644050200,
+          "stop" : 1584644050200,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_specific_contact",
+        "uid" : "8656dcc78b9beb45",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644056828,
+          "stop" : 1584644056828,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname wK[T8n=R%I5L/]",
+        "uid" : "16b48fc4cc3ffc60",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644036571,
+          "stop" : 1584644036571,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname wK[T8n=R%I5L/" ]
+      }, {
+        "name" : "test_add_first_contact_to_group",
+        "uid" : "bbf013fd6d7e0f73",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644047821,
+          "stop" : 1584644047821,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_fio",
+        "uid" : "2674127719ac300d",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644063724,
+          "stop" : 1584644063724,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname o1D3G]",
+        "uid" : "f3ea67122f6a1776",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644041112,
+          "stop" : 1584644041112,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname o1D3G" ]
+      }, {
+        "name" : "test_add_contact[None:]",
+        "uid" : "e829a7b6a27f4ace",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644032053,
+          "stop" : 1584644032053,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:" ]
+      }, {
+        "name" : "test_add_contact[None:lastname H'|6m\"PZ>BD,]",
+        "uid" : "3e6ffc2738423e43",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644038716,
+          "stop" : 1584644038716,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname H'|6m\"PZ>BD," ]
+      }, {
+        "name" : "test_add_all_contacts_to_group",
+        "uid" : "201e7b2b8816a7",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644017838,
+          "stop" : 1584644017838,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_phones_on_home_page",
+        "uid" : "10a0bab559787808",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644065875,
+          "stop" : 1584644065875,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname1]",
+        "uid" : "afbdc35f54099084",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644027528,
+          "stop" : 1584644027528,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname1" ]
+      }, {
+        "name" : "test_add_empty_contact",
+        "uid" : "e07e917af4e6f7c0",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644045676,
+          "stop" : 1584644045676,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_emails_on_home_page",
+        "uid" : "9dfb5154235b8f4",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644059212,
+          "stop" : 1584644059212,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname2]",
+        "uid" : "b810a2bc25bfb916",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644029669,
+          "stop" : 1584644029669,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname2" ]
+      }, {
+        "name" : "test_add_contact[None:lastname t[?E]",
+        "uid" : "b3c6229b2e72819",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644034188,
+          "stop" : 1584644034188,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname t[?E" ]
+      }, {
+        "name" : "test_delete_first_contact",
+        "uid" : "500c3983f657b429",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644052346,
+          "stop" : 1584644052346,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname OGU2W~99F5]",
+        "uid" : "22ea2ab43c532f06",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644043274,
+          "stop" : 1584644043274,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname OGU2W~99F5" ]
+      }, {
+        "name" : "test_send_all_contacts",
+        "uid" : "970034a5b3ee9655",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644070365,
+          "stop" : 1584644070365,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_some_contacts",
+        "uid" : "726f360cfed44fae",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644072721,
+          "stop" : 1584644072721,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_general_info_on_home_page",
+        "uid" : "fe954f02df07e064",
+        "parentUid" : "45670266382c81218c08adfc60eaf9fb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644061341,
+          "stop" : 1584644061341,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "45670266382c81218c08adfc60eaf9fb"
+    }, {
+      "name" : "12224-MainThread",
+      "children" : [ {
+        "name" : "test_add_first_contact_to_group",
+        "uid" : "e390fedff31d60fd",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596744,
+          "stop" : 1584643596744,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_modify_fio",
+        "uid" : "29a9983d3278c27c",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597333,
+          "stop" : 1584643597333,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_emails_on_home_page",
+        "uid" : "207baa2c29387ffc",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597169,
+          "stop" : 1584643597169,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_first_contact",
+        "uid" : "d367548b232fddcd",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596918,
+          "stop" : 1584643596918,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname o1D3G]",
+        "uid" : "dd69f4d6af68cf44",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596505,
+          "stop" : 1584643596505,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname o1D3G" ]
+      }, {
+        "name" : "test_delete_specific_contact",
+        "uid" : "a6fce4ad0829e5e4",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597088,
+          "stop" : 1584643597088,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_some_contacts",
+        "uid" : "b946de6bea6ed533",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597668,
+          "stop" : 1584643597668,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_del_from_edit_page",
+        "uid" : "32ffff1d728aa74a",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597009,
+          "stop" : 1584643597009,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname wK[T8n=R%I5L/]",
+        "uid" : "1eb7c5e082a811f7",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596337,
+          "stop" : 1584643596337,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname wK[T8n=R%I5L/" ]
+      }, {
+        "name" : "test_add_empty_contact",
+        "uid" : "404620c1ae847bbc",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596664,
+          "stop" : 1584643596664,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname t[?E]",
+        "uid" : "d87d387ee1f5c74c",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596259,
+          "stop" : 1584643596259,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname t[?E" ]
+      }, {
+        "name" : "test_phones_on_home_page",
+        "uid" : "c5bbf2ef4151cb3c",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597418,
+          "stop" : 1584643597418,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_contact[None:lastname2]",
+        "uid" : "7c60df3b15b4cb07",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596103,
+          "stop" : 1584643596103,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname2" ]
+      }, {
+        "name" : "test_add_contact[None:lastname1]",
+        "uid" : "7d13ff1d83a2efd2",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596026,
+          "stop" : 1584643596026,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname1" ]
+      }, {
+        "name" : "test_add_contact[None:lastname H'|6m\"PZ>BD,]",
+        "uid" : "285ae61b0a56eb73",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596415,
+          "stop" : 1584643596415,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname H'|6m\"PZ>BD," ]
+      }, {
+        "name" : "test_add_contact[None:lastname OGU2W~99F5]",
+        "uid" : "7a62e81fcc90305c",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596584,
+          "stop" : 1584643596584,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname OGU2W~99F5" ]
+      }, {
+        "name" : "test_add_contact[None:]",
+        "uid" : "f4063cf407f026cd",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596182,
+          "stop" : 1584643596182,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:" ]
+      }, {
+        "name" : "test_delete_all_contacts",
+        "uid" : "77874073dee62064",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643596836,
+          "stop" : 1584643596836,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_general_info_on_home_page",
+        "uid" : "e832ee867598ad3d",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597249,
+          "stop" : 1584643597249,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_phones_on_contact_view_page",
+        "uid" : "3993f7f980ddd255",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597509,
+          "stop" : 1584643597509,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_add_all_contacts_to_group",
+        "uid" : "f940a25615b724cc",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643595907,
+          "stop" : 1584643595907,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_send_all_contacts",
+        "uid" : "a9a67216d8cd33da",
+        "parentUid" : "43f2cb1d5197a896a743617109bc9bbb",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584643597587,
+          "stop" : 1584643597587,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "43f2cb1d5197a896a743617109bc9bbb"
+    } ],
+    "uid" : "747a04a478f020918b70fb783e4c98cc"
+  } ]
+}

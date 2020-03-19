@@ -1,0 +1,122 @@
+{
+  "uid" : "efe32c89a25d8703",
+  "name" : "test_del_from_edit_page",
+  "fullName" : "test.test_contacts.test_del_from_edit_page#test_del_from_edit_page",
+  "historyId" : "7ba5d29733a690fd3f20a03f7021da44",
+  "time" : {
+    "start" : 1584644236280,
+    "stop" : 1584644238876,
+    "duration" : 2596
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert [396:, 397:, ...емляковrererа] == [397:, 392:las...емляковrererа]\n  At index 0 diff: 396: != 397:\n  Use -v to get the full diff",
+  "statusTrace" : "app = <fixture.application.Application object at 0x00000239C701C048>\n\n    def test_del_from_edit_page(app):\n        contact = Contacts(firstname=\"Alina\", middlename=\"Ivanovna\", lastname=\"Lallala\")\n        if app.contacts.count() == 0:\n            app.contacts.add_information_of_person(contact)\n        old_contacts = app.contacts.get_contacts_list()\n        index = randrange(len(old_contacts))\n        app.contacts.delete_some_contact_from_edit_page(index)\n        new_contacts = app.contacts.get_contacts_list()\n        assert len(old_contacts) - 1 == len(new_contacts)\n        # удаление выбранного элемента\n        old_contacts[index:index+1] = []\n>       assert old_contacts == new_contacts\nE       assert [396:, 397:, ...емляковrererа] == [397:, 392:las...емляковrererа]\nE         At index 0 diff: 396: != 397:\nE         Use -v to get the full diff\n\ntest\\test_contacts\\test_del_from_edit_page.py:17: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "stop",
+    "time" : {
+      "start" : 1584644160495,
+      "stop" : 1584644160495,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1584644230022,
+      "stop" : 1584644236279,
+      "duration" : 6257
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1584644265846,
+      "stop" : 1584644268713,
+      "duration" : 2867
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test.test_contacts"
+  }, {
+    "name" : "suite",
+    "value" : "test_del_from_edit_page"
+  }, {
+    "name" : "host",
+    "value" : "ASinelnikova"
+  }, {
+    "name" : "thread",
+    "value" : "14004-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_contacts.test_del_from_edit_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b7dca13f957a3330",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost/addressbook/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost.\nStacktrace:\nWebDriverError@chrome://marionette/content/error.js:175:5\nUnknownError@chrome://marionette/content/error.js:482:5\nhandleReadyState@chrome://marionette/content/listener.js:297:13\nhandleEvent@chrome://marionette/content/listener.js:263:14",
+      "time" : {
+        "start" : 1584644054708,
+        "stop" : 1584644054708,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "32ffff1d728aa74a",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH.",
+      "time" : {
+        "start" : 1584643597009,
+        "stop" : 1584643597009,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "efe32c89a25d8703.json",
+  "parameterValues" : [ ]
+}

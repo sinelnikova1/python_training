@@ -1,0 +1,159 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert (6 + 1) == 6\n +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\n +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\n +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\n +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts",
+      "children" : [ {
+        "name" : "test_add_contact[None:lastname t[?E]",
+        "uid" : "debf65435fa38d80",
+        "parentUid" : "cb6aa2b000a4ddf78c9f835a85a92c38",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644185956,
+          "stop" : 1584644191492,
+          "duration" : 5536
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname t[?E" ]
+      }, {
+        "name" : "test_add_contact[None:lastname wK[T8n=R%I5L/]",
+        "uid" : "9b7b77b3df587059",
+        "parentUid" : "cb6aa2b000a4ddf78c9f835a85a92c38",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644191677,
+          "stop" : 1584644197796,
+          "duration" : 6119
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname wK[T8n=R%I5L/" ]
+      }, {
+        "name" : "test_add_contact[None:lastname H'|6m\"PZ>BD,]",
+        "uid" : "28e4e1c94c701109",
+        "parentUid" : "cb6aa2b000a4ddf78c9f835a85a92c38",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644197966,
+          "stop" : 1584644204154,
+          "duration" : 6188
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname H'|6m\"PZ>BD," ]
+      }, {
+        "name" : "test_add_contact[None:lastname o1D3G]",
+        "uid" : "1e386ad85f46e717",
+        "parentUid" : "cb6aa2b000a4ddf78c9f835a85a92c38",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644204316,
+          "stop" : 1584644210526,
+          "duration" : 6210
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname o1D3G" ]
+      }, {
+        "name" : "test_add_contact[None:lastname OGU2W~99F5]",
+        "uid" : "c2a82109eab36a78",
+        "parentUid" : "cb6aa2b000a4ddf78c9f835a85a92c38",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644210694,
+          "stop" : 1584644216949,
+          "duration" : 6255
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "None:lastname OGU2W~99F5" ]
+      } ],
+      "uid" : "cb6aa2b000a4ddf78c9f835a85a92c38"
+    }, {
+      "name" : "AssertionError: assert [396:, 397:, ...емляковrererа] == [397:, 392:las...емляковrererа]\n  At index 0 diff: 396: != 397:\n  Use -v to get the full diff",
+      "children" : [ {
+        "name" : "test_del_from_edit_page",
+        "uid" : "efe32c89a25d8703",
+        "parentUid" : "34dbf3b61f3648c04e04c335badfeadb",
+        "status" : "failed",
+        "time" : {
+          "start" : 1584644236280,
+          "stop" : 1584644238876,
+          "duration" : 2596
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "34dbf3b61f3648c04e04c335badfeadb"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  }, {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "AttributeError: 'WebDriver' object has no attribute 'switch_to_alert'",
+      "children" : [ {
+        "name" : "test_delete_all_contacts",
+        "uid" : "74cabb98792bf31c",
+        "parentUid" : "8d1acf0013e74f2ce534ec5fce837620",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644220603,
+          "stop" : 1584644222344,
+          "duration" : 1741
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_first_contact",
+        "uid" : "59ac5d751353f81",
+        "parentUid" : "8d1acf0013e74f2ce534ec5fce837620",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644228582,
+          "stop" : 1584644229998,
+          "duration" : 1416
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_specific_contact",
+        "uid" : "559ccb1d204f5daf",
+        "parentUid" : "8d1acf0013e74f2ce534ec5fce837620",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644239037,
+          "stop" : 1584644239740,
+          "duration" : 703
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8d1acf0013e74f2ce534ec5fce837620"
+    }, {
+      "name" : "AttributeError: 'NoneType' object has no attribute 'group'",
+      "children" : [ {
+        "name" : "test_phones_on_contact_view_page",
+        "uid" : "e94cfc5e4d0b615a",
+        "parentUid" : "4275126efd978a824e4c8f2963e9923f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1584644252937,
+          "stop" : 1584644253315,
+          "duration" : 378
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4275126efd978a824e4c8f2963e9923f"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

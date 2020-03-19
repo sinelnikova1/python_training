@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "f1f3ebb6694da52a7a5dc45a2e3a0a5b",
+    "name" : "test.test_contacts",
+    "statistic" : {
+      "failed" : 6,
+      "broken" : 4,
+      "skipped" : 0,
+      "passed" : 12,
+      "unknown" : 0,
+      "total" : 22
+    }
+  } ]
+}

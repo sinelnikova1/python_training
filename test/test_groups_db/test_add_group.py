@@ -1,12 +1,16 @@
 from model.group import Group
+import allure
 
 
 def test_add_group(app, db, json_groups, check_ui):
     group = json_groups
-    old_groups = db.get_group_list()
-    app.group.create(group)
+    with allure.step('Given a group list'):
+        old_groups = db.get_group_list()
+    with allure.step('When I add a group %s to the list' % group):
+        app.group.create(group)
+    with allure.step('Then the new group list is equal to the old list with added group'):
     # если количество соответствует, то можно загрузить новый список
-    new_groups = db.get_group_list()
+        new_groups = db.get_group_list()
     # проверка сравнения старого и нового списка с добавлением элемента
     old_groups.append(group)
     assert old_groups == new_groups

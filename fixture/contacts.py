@@ -88,7 +88,7 @@ class ContactsHelper:
         self.select_contact_by_index(index)
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
-        wd.switch_to_alert().accept()
+        wd.switch_to.alert.accept()
         self.app.return_to_home_page()
         self.contact_cache = None
 
@@ -98,7 +98,7 @@ class ContactsHelper:
         self.select_contact_by_id(id)
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
-        wd.switch_to_alert().accept()
+        wd.switch_to.alert.accept()
         self.app.return_to_home_page()
         self.contact_cache = None
 
@@ -122,7 +122,7 @@ class ContactsHelper:
         self.select_all_contacts()
         # submit deletion
         wd.find_element_by_xpath("//input[@value='Delete']").click()
-        wd.switch_to_alert().accept()
+        wd.switch_to.alert.accept()
         self.app.return_to_home_page()
         self.contact_cache = None
 

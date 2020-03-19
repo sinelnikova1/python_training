@@ -1,0 +1,125 @@
+{
+  "uid" : "c2a82109eab36a78",
+  "name" : "test_add_contact[None:lastname OGU2W~99F5]",
+  "fullName" : "test.test_contacts.test_add_contact#test_add_contact",
+  "historyId" : "a75bab25f3c0cab36363dc8b12b053d6",
+  "time" : {
+    "start" : 1584644210694,
+    "stop" : 1584644216949,
+    "duration" : 6255
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert (6 + 1) == 6\n +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\n +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\n +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\n +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts",
+  "statusTrace" : "app = <fixture.application.Application object at 0x00000239C6F82F08>, json_contacts = None:lastname OGU2W~99F5\n\n    def test_add_contact(app, json_contacts):\n        contact = json_contacts\n        old_contacts = app.contacts.get_contacts_list()\n        app.contacts.add_information_of_person(contact)\n>       assert len(old_contacts) + 1 == app.contacts.count()\nE       assert (6 + 1) == 6\nE        +  where 6 = len([396:, 392:lastname1, 394:lastname1, 393:lastname2, 395:lastname2, 391:Земляковrererа])\nE        +  and   6 = <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>>()\nE        +    where <bound method ContactsHelper.count of <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>> = <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8>.count\nE        +      where <fixture.contacts.ContactsHelper object at 0x00000239C6FBA7C8> = <fixture.application.Application object at 0x00000239C6F82F08>.contacts\n\ntest\\test_contacts\\test_add_contact.py:10: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "stop",
+    "time" : {
+      "start" : 1584644160495,
+      "stop" : 1584644160495,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  }, {
+    "name" : "app",
+    "time" : {
+      "start" : 1584644210538,
+      "stop" : 1584644210694,
+      "duration" : 156
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "stop::fin",
+    "time" : {
+      "start" : 1584644265846,
+      "stop" : 1584644268713,
+      "duration" : 2867
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "test.test_contacts"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_contact"
+  }, {
+    "name" : "host",
+    "value" : "ASinelnikova"
+  }, {
+    "name" : "thread",
+    "value" : "14004-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test.test_contacts.test_add_contact"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "json_contacts",
+    "value" : "None:lastname OGU2W~99F5"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "22ea2ab43c532f06",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&u=http%3A//localhost/addressbook/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%20localhost.\nStacktrace:\nWebDriverError@chrome://marionette/content/error.js:175:5\nUnknownError@chrome://marionette/content/error.js:482:5\nhandleReadyState@chrome://marionette/content/listener.js:297:13\nhandleEvent@chrome://marionette/content/listener.js:263:14",
+      "time" : {
+        "start" : 1584644043274,
+        "stop" : 1584644043274,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "7a62e81fcc90305c",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.WebDriverException: Message: 'geckodriver' executable needs to be in PATH.",
+      "time" : {
+        "start" : 1584643596584,
+        "stop" : 1584643596584,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "c2a82109eab36a78.json",
+  "parameterValues" : [ "None:lastname OGU2W~99F5" ]
+}
